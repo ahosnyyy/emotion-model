@@ -19,5 +19,10 @@ EXPOSE 8888
 ENV CURLOPT_SSL_VERIFYHOST=0
 ENV CURLOPT_SSL_VERIFYPEER=0
 
+ENV http_proxy=http://dest-cra2ail00.itc.global.mahle:3128
+ENV https_proxy=http://dest-cra2ail00.itc.global.mahle:3128
+ENV no_proxy=10.*,.mahle
+
 # Start Jupyter Notebook when the container runs
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+# CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["/bin/bash"]
